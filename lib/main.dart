@@ -13,13 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
       title: 'Art Work',
       routerConfig: AppRouter.router,
       theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.white,
         primaryColor: AppColors.primaryColor,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
     );
   }
 }
-

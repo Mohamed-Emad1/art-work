@@ -1,3 +1,4 @@
+import 'package:art/features/auth/presentation/views/login_view.dart';
 import 'package:art/features/home/presentation/views/home_view.dart';
 import 'package:go_router/go_router.dart';
 
@@ -10,7 +11,7 @@ abstract class AppRouter {
     routes: [
       GoRoute(
         path: kLoginView,
-        builder: (context, state) => const HomeView(),
+        builder: (context, state) => const LoginView(),
       ),
       GoRoute(
         path: kHomeView,
