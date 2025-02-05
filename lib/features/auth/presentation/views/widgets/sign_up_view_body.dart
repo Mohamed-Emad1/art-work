@@ -1,12 +1,12 @@
-import 'package:art/core/utils/app_styles.dart';
 import 'package:art/core/widgets/custom_button.dart';
-import 'package:art/core/widgets/custom_form_text_field.dart';
-import 'package:art/features/auth/presentation/views/widgets/dont_havce_account_widget.dart';
-import 'package:art/features/auth/presentation/views/widgets/remember_and_forget_password.dart';
+import 'package:art/features/auth/presentation/views/widgets/have_an_account.dart';
 import 'package:flutter/material.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+import '../../../../../core/utils/app_styles.dart';
+import '../../../../../core/widgets/custom_form_text_field.dart';
+
+class SignUpViewBody extends StatelessWidget {
+  const SignUpViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +20,11 @@ class LoginViewBody extends StatelessWidget {
               height: 137,
             ),
             const Text(
-              "Welcome",
+              "Create Account",
               style: AppStyles.bold31,
             ),
             const Text(
-              "Please enter your details\nto continue",
+              "Create your account to\nget started",
               style: AppStyles.medium16,
             ),
             const SizedBox(
@@ -43,20 +43,22 @@ class LoginViewBody extends StatelessWidget {
               textInputType: TextInputType.emailAddress,
               prefixIcons: Icon(Icons.email),
             ),
-            const RememberAndForgetPassword(),
+            const SizedBox(
+              height: 14,
+            ),
+            const CustomFromTextField(
+              hintText: "password",
+              textInputType: TextInputType.visiblePassword,
+              prefixIcons: Icon(Icons.password),
+            ),
             const SizedBox(
               height: 49,
             ),
-            CustomButton(text: "Login ->", onPressed: () {}),
+            CustomButton(text: "Sign up ->", onPressed: () {}),
             const SizedBox(
-              height: 9,
+              height: 27,
             ),
-            const Center(
-              child: DontHaveAccountWidget(),
-            ),
-            const SizedBox(
-              height: 16,
-            ),
+            const Center(child: HaveAnAccount())
           ],
         ),
       ),

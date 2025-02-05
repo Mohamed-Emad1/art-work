@@ -1,15 +1,11 @@
-import 'package:art/core/routing/app_router.dart';
 import 'package:art/core/utils/app_colors.dart';
+import 'package:art/core/utils/app_styles.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../../core/utils/app_styles.dart';
-
-class DontHaveAccountWidget extends StatelessWidget {
-  const DontHaveAccountWidget({
-    super.key,
-  });
+class HaveAnAccount extends StatelessWidget {
+  const HaveAnAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +18,7 @@ class DontHaveAccountWidget extends StatelessWidget {
           TextSpan(
             recognizer: TapGestureRecognizer()
               ..onTap = () {
-                GoRouter.of(context).push(AppRouter.kSignUpView);
+                GoRouter.of(context).pop();
               },
             text: "Sign Up",
             style: AppStyles.medium13.copyWith(color: AppColors.primaryColor),

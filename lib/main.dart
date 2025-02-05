@@ -17,9 +17,9 @@ class MyApp extends StatelessWidget {
       title: 'Art Work',
       routerConfig: AppRouter.router,
       theme: ThemeData(
-        scaffoldBackgroundColor: AppColors.white,
+        // scaffoldBackgroundColor: AppColors.white,
         primaryColor: AppColors.primaryColor,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primaryColor),
       ),
     );
   }
